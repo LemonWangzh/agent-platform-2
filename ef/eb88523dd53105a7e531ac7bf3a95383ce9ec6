@@ -1,0 +1,33 @@
+gradle/wrapper/gradle-wrapper.properties
+  s_4d816bbbf4b193::t_70cc0e4a77746f 1-9
+build.gradle.kts
+  s_4d816bbbf4b193::t_6322616b1debe9 1-28
+src/main/java/com/wzh/agent/App.java
+  s_4d816bbbf4b193::t_b191fd6171087c 1-8
+settings.gradle.kts
+  s_4d816bbbf4b193::t_a6a567afe7e23e 1
+.gitignore
+  s_4d816bbbf4b193::t_281aed92fd5f4d 25-38
+gradlew
+  s_4d816bbbf4b193::t_70cc0e4a77746f 1-248
+src/test/java/com/wzh/agent/AppTest.java
+  s_4d816bbbf4b193::t_64e12287d7238a 1-13
+gradlew.bat
+  s_4d816bbbf4b193::t_70cc0e4a77746f 1-112
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "efeb88523dd53105a7e531ac7bf3a95383ce9ec6",
+  "prompts": {},
+  "sessions": {
+    "s_4d816bbbf4b193": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d3feecfb-862d-4981-bbf0-14bd5e98a3d1",
+        "model": "glm-5.3"
+      },
+      "human_author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  }
+}
