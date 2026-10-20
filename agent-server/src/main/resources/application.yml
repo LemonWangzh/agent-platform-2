@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: agent-platform-2
+  profiles:
+    active: dev
+
+# 日志配置
+logging:
+  level:
+    com.wzh.agent: debug
+  file:
+    name: logs/${spring.application.name}.log
+
+# Actuator 健康检查（需要加 spring-boot-starter-actuator 依赖）
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+---
+# 开发环境
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+logging:
+  level:
+    com.wzh.agent: debug
+
+---
+# 测试环境
+spring:
+  config:
+    activate:
+      on-profile: test
+
+---
+# 生产环境
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+logging:
+  level:
+    com.wzh.agent: warn
