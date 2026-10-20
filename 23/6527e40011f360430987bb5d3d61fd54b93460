@@ -1,0 +1,58 @@
+agent-server/build.gradle.kts
+  s_4d816bbbf4b193::t_6beea0684bc62f 8
+  s_4d816bbbf4b193::t_329e1e987f189c 1-5,7,9-10,14,16,19-20
+  s_4d816bbbf4b193::t_1458d24c5c17d2 6,11-13,15,17-18,21-22
+buildSrc/build.gradle.kts
+  s_4d816bbbf4b193::t_f623bb629d77a6 1-7,9,19-20
+  s_4d816bbbf4b193::t_06879e20f69f86 8,10-18,21-22
+buildSrc/src/main/kotlin/agent.java-conventions.gradle.kts
+  s_4d816bbbf4b193::t_4675c79cc7b622 1-10,12,14,18,21-22,27-31,34,36,38,42,44,46,50
+  s_4d816bbbf4b193::t_5bdf04b3bc6284 11,13,15-17,19-20,23-26,32-33,35,37,39-41,43,45,47-49,51-53
+build.gradle.kts
+  s_4d816bbbf4b193::t_d92660d439f3f0 1-9,11-12,17,20
+  s_4d816bbbf4b193::t_951e8156d3d0f9 13,18-19
+  s_4d816bbbf4b193::t_da88b9b8ef79d4 16,22-27
+agent-common/build.gradle.kts
+  s_4d816bbbf4b193::t_d2351a0fa0f2c2 10
+  s_4d816bbbf4b193::t_98f5ee5ed14a4d 1-4,6-7,9
+  s_4d816bbbf4b193::t_3a796690bf9ede 5,8,11
+settings.gradle.kts
+  s_4d816bbbf4b193::t_305ab5420ee2b4 9-10,12,14-17,20,23,29,32
+  s_4d816bbbf4b193::t_ed98d0e5f1daf1 1-8,11,13,21,24-28,30-31
+  s_4d816bbbf4b193::t_7c5be324d54c7e 18-19
+agent-common/src/main/java/com/wzh/agent/common/CommonConstants.java
+  s_4d816bbbf4b193::t_7cb00dd079f4fe 1,3-6,8,10
+  s_4d816bbbf4b193::t_e752676c670361 2
+  s_4d816bbbf4b193::t_2f0f3578cc3803 7
+  s_4d816bbbf4b193::t_ecb994647b443e 9
+  s_4d816bbbf4b193::t_2a383cb5ab3796 11-12
+agent-server/src/main/java/com/wzh/agent/AgentApplication.java
+  s_4d816bbbf4b193::t_4a50132c11f2b5 3-7,10
+agent-server/src/main/java/com/wzh/agent/controller/HelloController.java
+  s_4d816bbbf4b193::t_9d75204aa2c19b 1-13
+agent-server/src/main/resources/application.yml
+  s_4d816bbbf4b193::t_be80e84f9db5cd 1-51
+agent-server/src/test/java/com/wzh/agent/AgentApplicationTest.java
+  s_4d816bbbf4b193::t_2d0e989d199eae 4,6-7,10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "236527e40011f360430987bb5d3d61fd54b93460",
+  "prompts": {},
+  "humans": {
+    "h_1eaad2febae7fe": {
+      "author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  },
+  "sessions": {
+    "s_4d816bbbf4b193": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d3feecfb-862d-4981-bbf0-14bd5e98a3d1",
+        "model": "glm-5.3"
+      },
+      "human_author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  }
+}
