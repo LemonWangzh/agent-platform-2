@@ -1,0 +1,47 @@
+agent-server/build.gradle.kts
+  s_4d816bbbf4b193::t_8c7bd492426183 23-25
+  h_1eaad2febae7fe 22,26
+agent-server/src/main/java/com/wzh/agent/config/ChatConfig.java
+  s_4d816bbbf4b193::t_a3895a78e667b8 10,12,16,20
+  h_1eaad2febae7fe 30
+  s_4d816bbbf4b193::t_323f48976c916b 1-3,7-9,21,23,32,48-49
+  s_4d816bbbf4b193::t_1bf08612f52a5f 4-6,11,13-15,17-19,22,24-29,31,33-47
+agent-server/src/test/java/com/wzh/agent/AgentApplicationTest.java
+  s_4d816bbbf4b193::t_ec6e5f40497047 6-10
+agent-server/src/main/java/com/wzh/agent/config/AiProperties.java
+  h_1eaad2febae7fe 3,22,30,43-44
+  s_4d816bbbf4b193::t_df10b4b5e63f75 1-2,4-21,23-29,31-42,45-46
+buildSrc/src/main/kotlin/agent.java-conventions.gradle.kts
+  s_4d816bbbf4b193::t_ca0ab35203e47f 38-39
+  h_1eaad2febae7fe 40
+  s_4d816bbbf4b193::t_09f287256ca3fa 46-49
+agent-server/src/main/java/com/wzh/agent/controller/MyController.java
+  s_4d816bbbf4b193::t_e563da0bd8d018 1-2,4-19,23-27,29,31-35
+  h_1eaad2febae7fe 3,20-22,28,30
+agent-server/src/main/resources/application.yml
+  s_4d816bbbf4b193::t_ef4f9f3e60483f 14
+  h_1eaad2febae7fe 33,76
+  s_4d816bbbf4b193::t_3249d2ec51c67b 12-13,32
+  s_4d816bbbf4b193::t_6b456dc5d13f1c 10-11,15-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "aecab628291b2501292b3eb380d5fb80d03e637d",
+  "prompts": {},
+  "humans": {
+    "h_1eaad2febae7fe": {
+      "author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  },
+  "sessions": {
+    "s_4d816bbbf4b193": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d3feecfb-862d-4981-bbf0-14bd5e98a3d1",
+        "model": "glm-5.3"
+      },
+      "human_author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  }
+}
