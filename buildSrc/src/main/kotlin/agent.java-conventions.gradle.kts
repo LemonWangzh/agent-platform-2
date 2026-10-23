@@ -35,12 +35,18 @@ dependencyManagement {
         mavenBom("org.springframework.boot:spring-boot-dependencies:4.1.0")
         // Spring Cloud 的版本清单（注意：要和 Boot 版本配套，查官方兼容表）
         mavenBom("org.springframework.cloud:spring-cloud-dependencies:2025.1.2")
-        // 以后接 Spring AI / Spring Cloud Alibaba，在这里加对应的 mavenBom(...)
+        // Spring AI 的版本清单（决定所有 spring-ai-* 依赖的版本）
+        // 注意：mavenBom 只能填"版本清单"，普通依赖不能写在这里
+        mavenBom("org.springframework.ai:spring-ai-bom:2.0.0")
     }
 }
 
 // 公共依赖：每个子模块都会自动带上
 dependencies {
+    // Lombok：编译期生成 getter/setter/构造器等，省去样板代码
+    // 版本号不用写，由上面的 spring-boot-dependencies BOM 统一管理
+    "compileOnly"("org.projectlombok:lombok")
+    "annotationProcessor"("org.projectlombok:lombok")
     // Spring Boot 官方测试套件（JUnit 5 + Spring Test + AssertJ 等）
     "testImplementation"("org.springframework.boot:spring-boot-starter-test")
     // 让测试报告能正确识别 JUnit 平台

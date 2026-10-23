@@ -19,4 +19,9 @@ dependencies {
     // Spring MVC + 内嵌 Tomcat，提供 REST 接口能力
     // 注意：没有版本号，版本由约定插件里的 BOM 统一决定
     implementation("org.springframework.boot:spring-boot-starter-web")
+
+    // Spring AI 的 OpenAI 接入（新版命名规范：spring-ai-starter-model-模型名）
+    // 版本号由约定插件里的 spring-ai-bom 统一决定
+    implementation("org.springframework.ai:spring-ai-starter-model-openai")
+
 }

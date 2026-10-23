@@ -7,6 +7,30 @@ spring:
   profiles:
     active: dev
 
+  # Spring AI 自动装配兜底（starter 在类路径上时会自动建一个 OpenAiChatModel，
+  # 没有这个 key 启动会报错；实际多供应商配置在下面的 app.ai.providers）
+  ai:
+    openai:
+      api-key: ${ZHIPU_API_KEY:demo-key}
+
+# ================= 多供应商大模型配置 =================
+# app.ai.providers 下每个 key 就是一个供应商（名字随便起，和 Bean 名对应）
+# 新增一家供应商：加一个小节 + ChatConfig 里加一个 @Bean，完事
+app:
+  ai:
+    providers:
+      glm:                          # 智谱 GLM
+        base-url: https://open.bigmodel.cn/api/paas/v4
+        api-key: ${ZHIPU_API_KEY:demo-key}
+        model: GLM-4.7
+        temperature: 0.5
+      deepseek:                     # DeepSeek（都是 OpenAI 兼容协议）
+        base-url: https://api.deepseek.com
+        api-key: ${DEEPSEEK_API_KEY:demo-key}
+        model: deepseek-chat
+        temperature: 0.3
+
+
 # 日志配置
 logging:
   level:
@@ -49,3 +73,4 @@ spring:
 logging:
   level:
     com.wzh.agent: warn
+
