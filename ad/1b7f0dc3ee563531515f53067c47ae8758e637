@@ -1,0 +1,27 @@
+agent-server/src/main/java/com/wzh/agent/controller/MyController.java
+  h_1eaad2febae7fe 20
+agent-server/src/main/java/com/wzh/agent/config/ChatConfig.java
+  h_1eaad2febae7fe 6-7,11,13,38,55-85
+  s_4d816bbbf4b193::t_a01bcf7d3e3bb2 12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ad1b7f0dc3ee563531515f53067c47ae8758e637",
+  "prompts": {},
+  "humans": {
+    "h_1eaad2febae7fe": {
+      "author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  },
+  "sessions": {
+    "s_4d816bbbf4b193": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d3feecfb-862d-4981-bbf0-14bd5e98a3d1",
+        "model": "unknown"
+      },
+      "human_author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  }
+}
