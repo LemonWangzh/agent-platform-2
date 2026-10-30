@@ -3,9 +3,14 @@ package com.wzh.agent.config;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiChatOptions;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
+import java.util.Scanner;
 
 /**
  * 多供应商 ChatClient 配置。
@@ -30,6 +35,7 @@ public class ChatConfig {
 
     /** DeepSeek */
     @Bean
+    @Primary
     ChatClient deepseek(AiProperties props) {
         return buildClient(props.getProviders().get("deepseek"));
     }
@@ -46,4 +52,35 @@ public class ChatConfig {
                 .build();
         return ChatClient.create(model);
     }
+
+
+    @Bean
+    CommandLineRunner cli(@Qualifier("deepseek") ChatClient deepChat, @Qualifier("glm") ChatClient gmlChat){
+        return args -> {
+            Scanner scanner = new Scanner(System.in);
+            ChatClient chatClient;
+            // Model selection
+            System.out.println("\nSelect your AI model:");
+            System.out.println("1. Deepseek");
+            System.out.println("2. gml");
+            System.out.print("Enter your choice (1 or 2): ");
+
+            String choice = scanner.nextLine().trim();
+            if ("1".equals(choice)) {
+                chatClient = deepChat;
+                System.out.println("Using Deepseek model");
+            } else {
+                chatClient = gmlChat;
+                System.out.println("Using glm model");
+            }
+
+            // Use the selected chat client
+            System.out.print("\nEnter your question: ");
+            String input = scanner.nextLine();
+            String response = chatClient.prompt(input).call().content();
+            System.out.println("ASSISTANT: " + response);
+            scanner.close();
+        };
+    }
+
 }
