@@ -54,7 +54,7 @@ public class ChatConfig {
     }
 
 
-    @Bean
+//    @Bean
     CommandLineRunner cli(@Qualifier("deepseek") ChatClient deepChat, @Qualifier("glm") ChatClient gmlChat){
         return args -> {
             Scanner scanner = new Scanner(System.in);
