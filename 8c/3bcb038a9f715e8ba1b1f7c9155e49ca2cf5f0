@@ -1,0 +1,29 @@
+agent-server/src/main/java/com/wzh/agent/config/ChatConfig.java
+  h_1eaad2febae7fe 57
+agent-server/src/main/java/com/wzh/agent/controller/AiChatController.java
+  h_1eaad2febae7fe 3,6,8,12-13,22-23,34-35,41-48,55,57,65-71
+  s_4d816bbbf4b193::t_e870aaefa8adf4 49-54,56,58-64
+agent-common/src/main/java/com/wzh/agent/films/ActorFilms.java
+  h_1eaad2febae7fe 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8c3bcb038a9f715e8ba1b1f7c9155e49ca2cf5f0",
+  "prompts": {},
+  "humans": {
+    "h_1eaad2febae7fe": {
+      "author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  },
+  "sessions": {
+    "s_4d816bbbf4b193": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d3feecfb-862d-4981-bbf0-14bd5e98a3d1",
+        "model": "glm-5.3"
+      },
+      "human_author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  }
+}
