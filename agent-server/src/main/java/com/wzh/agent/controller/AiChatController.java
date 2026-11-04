@@ -3,11 +3,13 @@ package com.wzh.agent.controller;
 import com.wzh.agent.films.ActorFilms;
 import jakarta.annotation.Resource;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -25,6 +27,9 @@ class AiChatController {
 
     @Resource
     private ChatClient chatClient;
+
+    private BeanOutputConverter<List<ActorFilms>> converter = new BeanOutputConverter<>(new ParameterizedTypeReference<List<ActorFilms>>() {
+    });
 
     /**
      * 示例：
@@ -65,6 +70,22 @@ class AiChatController {
                 .call()
                 .entity(ActorFilms.class, ChatClient.EntityParamSpec::validateSchema);
     }
+
+
+    @GetMapping("/fluxChat")
+    public Flux<String> fluxChat(@RequestParam String input){
+        return this.chatClient.prompt().user(u -> u.text("""
+                Generate the filmography for a random actor.{format}
+                """).param("format", this.converter.getFormat())).stream().content();
+    }
+
+    @GetMapping("findBooksByCountry")
+    public String findBooksByCountry(@RequestParam String country){
+        return this.chatClient.prompt().user(u -> u.text("Tell me five famous books from the {country}.")
+                .param("country", country)).call().content();
+    }
+
+
 
 
 
