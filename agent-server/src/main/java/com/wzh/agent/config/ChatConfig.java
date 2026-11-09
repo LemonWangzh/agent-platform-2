@@ -9,6 +9,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Scanner;
 
@@ -29,13 +31,13 @@ public class ChatConfig {
 
     /** 智谱 GLM */
     @Bean
+    @Primary
     ChatClient glm(AiProperties props) {
         return buildClient(props.getProviders().get("glm"));
     }
 
     /** DeepSeek */
     @Bean
-    @Primary
     ChatClient deepseek(AiProperties props) {
         return buildClient(props.getProviders().get("deepseek"));
     }

@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 
+import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 大模型对话接口：按供应商名路由到对应的 ChatClient。
@@ -86,7 +88,14 @@ class AiChatController {
     }
 
 
-
+    @GetMapping("/userPrompt")
+    public String userPrompt(@RequestParam String input){
+        Map<String, Object> userPromptExt = Map.of("messageId", "msg-123",
+                "userId", "user-001",
+                "timestamp", System.currentTimeMillis());
+        return this.chatClient.prompt().user(u ->u.text(input).metadata(userPromptExt))
+                .call().content();
+    }
 
 
 
