@@ -1,0 +1,16 @@
+agent-server/src/main/java/com/wzh/agent/config/ChatConfig.java
+  h_1eaad2febae7fe 55
+agent-server/src/main/java/com/wzh/agent/controller/AiChatController.java
+  h_1eaad2febae7fe 105-110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5df073caccc0465bcd0152688fd628a9525c5490",
+  "prompts": {},
+  "humans": {
+    "h_1eaad2febae7fe": {
+      "author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  }
+}
