@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -96,6 +95,13 @@ class AiChatController {
         return this.chatClient.prompt().user(u ->u.text(input).metadata(userPromptExt))
                 .call().content();
     }
+
+    @GetMapping("/systemMessage")
+    public String systemMessageTest(@RequestParam String input){
+        return chatClient.prompt().user(input).call().content();
+    }
+
+
 
 
 
