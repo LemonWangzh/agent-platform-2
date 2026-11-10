@@ -1,0 +1,27 @@
+agent-server/src/main/java/com/wzh/agent/config/ChatConfig.java
+  h_1eaad2febae7fe 55
+agent-server/src/main/java/com/wzh/agent/controller/AiChatController.java
+  h_1eaad2febae7fe 99-103
+  s_4d816bbbf4b193::t_b0aef29ef58564 104-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5e5f66283cf56a0013e8d49fe24b8dc58c3ae947",
+  "prompts": {},
+  "humans": {
+    "h_1eaad2febae7fe": {
+      "author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  },
+  "sessions": {
+    "s_4d816bbbf4b193": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d3feecfb-862d-4981-bbf0-14bd5e98a3d1",
+        "model": "unknown"
+      },
+      "human_author": "karson.wang1 <karson.wang1@jtexpress.com>"
+    }
+  }
+}
