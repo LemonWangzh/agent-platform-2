@@ -102,6 +102,12 @@ class AiChatController {
     }
 
 
+    @GetMapping("/systemMessage2")
+    public String systemMessageTest2(@RequestParam("message") String input, String voice){
+        return chatClient.prompt()
+                .user(input).system(sp -> sp.param("voice", voice)).call().content();
+    }
+
 
 
 

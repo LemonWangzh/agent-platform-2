@@ -52,7 +52,7 @@ public class ChatConfig {
                         .temperature(provider.getTemperature())
                         .build())
                 .build();
-        return ChatClient.builder(model).defaultSystem("You are a friendly chat bot that answers question in the voice of a Pirate").build();
+        return ChatClient.builder(model).defaultSystem("You are a friendly chat bot that answers question in the voice of a {voice}").build();
     }
 
 
